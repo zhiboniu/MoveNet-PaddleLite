@@ -1,14 +1,16 @@
-# movenet_deploy
+# MoveNet-PaddleLite
 
-movenet cpp deploy based on PaddleLite;
+Adapted from [PaddleDetection](https://github.com/PaddlePaddle/PaddleDetection);
 
-movenet model transformed from tensorflow;
+Movenet cpp deploy based on [PaddleLite](https://github.com/PaddlePaddle/Paddle-Lite);
+
+Movenet model transformed from tensorflow;
 
 
 
 ## 简介
 
-movenet是近年的优秀开源模型代表，原模型以Tensorflow模型格式开源。
+Movenet是近年的优秀开源模型代表，原模型以Tensorflow模型格式开源。
 
 这里经转换后得到Paddle存储格式的模型。
 
@@ -26,6 +28,9 @@ movenet_deploy/
 |-- libpaddle_light_api_shared.so Paddle-Lite库文件
 ```
 
+**注：Paddle-Lite需使用最新版本v2.10，低版本不支持，也可从下面完整测试工程文件夹包种获取**
+
+
 
 
 ## movenet部署模型下载地址
@@ -36,24 +41,17 @@ movenet_deploy/
 
 [movenet_deploy.tar.gz](https://bj.bcebos.com/v1/paddledet/models/keypoint/movenet_deploy.zip)
 
-### PaddleLite部署模型单独下载
 
-只使用paddlelite格式的模型，自己编译可执行文件
 
-[movenet_s_paddlelite](https://bj.bcebos.com/v1/paddledet/models/keypoint/model_det_singlepose.zip)
-[movenet_m_paddlelite](https://bj.bcebos.com/v1/paddledet/models/keypoint/model_det_multipose.zip)
+### 模型单独下载地址
 
-### 经onnx转换后的Paddle模型单独下载
+| 模型类别                 | singlepose模型                                               | multipose模型                                                |
+| ------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| PaddleLite部署模型       | [movenet_s_paddlelite](https://bj.bcebos.com/v1/paddledet/models/keypoint/model_det_singlepose.zip) | [movenet_m_paddlelite](https://bj.bcebos.com/v1/paddledet/models/keypoint/model_det_multipose.zip) |
+| 经onnx转换后的Paddle模型 | [movenet_s_paddle](https://bj.bcebos.com/v1/paddledet/models/keypoint/movenet_s_paddle.tar.gz) | [movenet_m_paddle](https://bj.bcebos.com/v1/paddledet/models/keypoint/movenet_m_paddle.tar.gz) |
+| movenet原始模型          | [movenet_singlepose](https://tfhub.dev/google/movenet/singlepose/lightning/4) | [movenet_multipose](https://tfhub.dev/google/movenet/multipose/lightning/1) |
 
-paddle原始格式的模型，自己转paddlelite格式
 
-[movenet_s_paddle](https://bj.bcebos.com/v1/paddledet/models/keypoint/movenet_s_paddle.tar.gz)
-[movenet_m_paddle](https://bj.bcebos.com/v1/paddledet/models/keypoint/movenet_m_paddle.tar.gz)
-
-## movenet原模型下载地址
-
-[movenet_singlepose](https://tfhub.dev/google/movenet/singlepose/lightning/4)
-[movenet_multipose](https://tfhub.dev/google/movenet/multipose/lightning/1)
 
 ## 完整部署操作步骤及使用说明
 
